@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load wagtailcore_tags wagtailimages_tags %}
+{% block main_class %}blog-style has-shadow{% endblock %}
+{% block content %}
+  <h1 class="typography--is-title">{{ page.title }}</h1>
+  <h2 class="typography--is-subtitle">{{ page.intro }}</h2>
+  <div class="blog__representative-image-container">
+    {% image page.representative_image width-800 %}
+  </div>
+  <div class="blog--reading-width">
+    {{ page.body|richtext }}
+  </div>
+  <a class="UI__button-link margin-3 centered-block is-background-col-1" href="{{ page.get_parent.url }}">See Other Projects</a>
+{% endblock %}

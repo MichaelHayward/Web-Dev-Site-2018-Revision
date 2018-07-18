@@ -1,0 +1,19 @@
+{% load static wagtailcore_tags %}
+
+<nav class="navbar">
+  <div class="navbar__page-title">
+    <a class="typography--no-link-styling" href="{% slugurl 'home' %}"><h1 class="text-col-1">Mike Hayward</h1></a>
+  </div>
+  <div class="navbar__menu">
+    <a class="navbar__menu__item" href="{% slugurl 'home' %}">Home</a>
+    <a class="navbar__menu__item" href="{% slugurl 'blog' %}">Blog</a>
+    <a class="navbar__menu__item" href="{% slugurl 'my-work' %}">My Work</a>
+    <a class="navbar__menu__item" href="{% slugurl 'about' %}">About</a>
+    <a class="navbar__menu__item navbar__menu__cta" href="{% slugurl 'contact' %}">Contact</a>
+  </div>
+  <div class="navbar__hamburger">
+    <span class="navbar__hamburger__piece"></span>
+    <span class="navbar__hamburger__piece"></span>
+    <span class="navbar__hamburger__piece"></span>
+  </div>
+</nav>

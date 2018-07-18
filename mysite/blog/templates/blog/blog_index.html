@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load wagtailcore_tags wagtailimages_tags %}
+{% block main_class %}blog-style has-shadow{% endblock %}
+{% block content %}
+  <div class="screen-wipe"></div>
+  <h1 class="typography--is-title">{{ page.title }}</h1>
+  <p>{{ page.intro }}</p>
+
+  {% if blogposts %}
+    {% for blogpost in blogposts %}
+      {% with blogpost=blogpost.specific %}
+      <div class="blog__index__post-block blog--reading-width">
+        <a href="{{ blogpost.url }}"><h2 class="typography--is-title">{{ blogpost.title }}</h2></a>
+        <small>{{ page.first_published_at|date:"d M, Y" }}</small>
+        <p>{{ blogpost.intro }}</p>
+        <div class="blog__index__post-image-container">
+            {% image blogpost.representative_image original %}
+        </div>
+      </div>
+      {% endwith %}
+    {% endfor %}
+  {% else %}
+  <p>Hmm, we couldn't find any blogposts</p>
+  {% endif %}
+
+{% endblock %}

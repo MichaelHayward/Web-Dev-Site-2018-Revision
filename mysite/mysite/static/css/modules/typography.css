@@ -1,0 +1,26 @@
+body {
+  font-family: Montserrat;
+}
+
+.typography__site-title {
+  color: #383838;
+  font-size: 3rem;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.typography--is-title {
+  font-family: lobster, sans-serif;
+}
+
+.typography--is-subtitle {
+  font-size: 1.15rem;
+  font-weight: 400;
+}
+
+.typography--no-link-styling {
+  text-decoration: none;
+  
+}

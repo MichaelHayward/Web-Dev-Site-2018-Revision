@@ -1,0 +1,32 @@
+.home__site-logo-container {
+  position: relative;
+}
+
+.home__site-logo {
+  display: block;
+  margin: auto;
+  width: 300px;
+  height: auto;
+  padding: 2rem;
+}
+
+.home__floating-logo-text {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  color: #efefef;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  font-size: 4rem;
+  margin: 0;
+}
+
+@media only screen and (max-width: 1000px){
+  .home__site-logo {
+    max-width: 50%;
+    height: auto;
+  }
+
+  .home__floating-logo-text {
+    font-size: 3rem;
+  }
+}

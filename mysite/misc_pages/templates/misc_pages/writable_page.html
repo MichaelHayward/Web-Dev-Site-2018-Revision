@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load wagtailcore_tags wagtailimages_tags %}
+{% block main_class %}blog-style has-shadow{% endblock %}
+{% block content %}
+  {% if page.get_parent.slug == "home" %}
+    <div class="screen-wipe"></div>
+  {% endif %}
+
+  <h1 class="typography--is-title">{{ page.title }}</h1>
+  <p>{{ page.intro }}</p>
+  <div class="blog--reading-width">
+
+    {{ page.body|richtext }}
+  </div>
+
+{% endblock %}

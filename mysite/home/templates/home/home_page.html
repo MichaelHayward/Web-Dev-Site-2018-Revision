@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags static %}
+
+{% block body_class %}template-homepage{% endblock %}
+{% block content %}
+  <div class="screen-wipe"></div>
+  <section class="skills-list__container svg-bg-1">
+    <div class="">
+      <div class="home__site-logo-container">
+          <img src="{% static 'images/mh-logo-cog.svg' %}" alt="Mike Hayward logo" class="home__site-logo animations__infinite-spin">
+          <h2 class="typography--is-title home__floating-logo-text">MH</h2>
+      </div>
+
+
+      <h1 class="typography--is-title typography__site-title">I'm Mike, and I build websites!</h1>
+      {% if skills %}
+        <div class="skills-list">
+          {% for skill in skills %}
+            <div class="skills-list__block">
+              <p>{{ skill.title }}</p>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </section>
+  {% if page.body %}
+  <section class="padding-3 blog-style">
+    {{ page.body|richtext }}
+  </section>
+  {% endif %}
+{% endblock %}
