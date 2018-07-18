@@ -1,0 +1,25 @@
+/* Goes on EVERY page that is accessible from the nav menu directly
+i.e. not blog posts, but the blog index, about, my_work and home pages.
+Makes the mobile navigation seem app-like without anything bloated */
+.screen-wipe {
+  opacity: 0;
+  display: block;
+  background-color: white;
+  border-bottom: 4px solid var(--col-1);
+  height: 110vh;
+  width: 110vw;
+  position: fixed;
+  top:0; left: 0;
+  z-index: 4;
+  margin: -1rem;
+  pointer-events: none;
+
+  animation: 1s 1 forwards screen-wipe ease-in-out;
+}
+
+@media only screen and (max-width: 1000px){
+  .screen-wipe {
+    opacity: 1;
+    pointer-events: auto; 
+  }
+}

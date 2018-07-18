@@ -1,0 +1,12 @@
+/* Yes. British spelling.
+  ( •_•)>⌐■-■
+  (⌐■_■)
+*/
+
+.is-background-col-1 {
+  background-color: var(--col-1);
+}
+
+.text-col-1 {
+  color: var(--col-1);
+}
