@@ -4,7 +4,7 @@ DEBUG = False
 
 SECRET_KEY = os.environ['SECRET_KEY']
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['www.mikebuildswebsites.com']
 
 try:
     from .local import *

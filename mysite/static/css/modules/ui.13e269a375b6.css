@@ -1,0 +1,10 @@
+.UI__button-link,
+.UI__button-link:visited {
+  display: block;
+  color: white;
+  padding: 1rem;
+  width: 200px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.5)
+}

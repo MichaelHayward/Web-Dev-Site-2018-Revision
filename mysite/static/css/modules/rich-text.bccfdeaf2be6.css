@@ -1,0 +1,15 @@
+/* Helps style the output from Wagtail's RichTextField */
+
+.rich-text img {
+  max-width: 100%;
+  height: auto;
+}
+
+.richtext-image.full-width {
+  display: block;
+  margin: auto;
+}
+
+.rich-text ul {
+  list-style-type: circle;
+}
